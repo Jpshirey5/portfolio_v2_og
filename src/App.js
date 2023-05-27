@@ -3,7 +3,7 @@ import Header from './Components/header';
 import Main from './Components/main';
 import About from './Components/about';
 import Portfolio from './Components/portfolio';
-
+import Resume from './Components/resume';
 
 export default function App() {
   return (
@@ -15,9 +15,9 @@ export default function App() {
           <About />
           <div className='portfolio'>
             <Portfolio />
-            {/* <div className='contact'>
-          <Contact />
-        </div>  */}
+             <div className='resume'>
+          <Resume />
+        </div>  
           </div>
         </div>
       </div>
