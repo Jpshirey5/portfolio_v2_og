@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
@@ -132,6 +136,7 @@
   font-size: 50px;
   margin: 0 40px 40px 0;
   background-color: #E8EDDF;
+  color: black;
 }
 
 .card-image {
@@ -170,36 +175,209 @@
   padding: 100px;
   font-size: 30px;
   font-family: 'Roboto Condensed', sans-serif;
-  margin-top: -100px;
+  margin-top: 150px;
+  margin-left: -100px;
+  margin-bottom: -100px;
   text-align: left;
+  justify-content: left;
+  width: 100%;
+  min-height: 45vh;
 }
-/* Text */
-.category {
-  text-transform: uppercase;
-  font-size: 0.7em;
-  font-weight: 600;
+
+.resume_title {
+  margin-left: 100px;
+  margin-top: -70px;
   color: black;
-  padding: 10px 7px 0;
 }
 
-.category:hover {
-  cursor: pointer;
-}
-
-.heading {
+.resume_text {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
+  font-size: 30px;
   font-weight: 600;
-  color: rgb(88, 87, 87);
-  padding: 7px;
+  margin-left: 100px;
 }
 
-.heading:hover {
+.resume_link {
+  margin-left: 350px;
+  margin-top: 20px;
+  color: black;
+}
+
+.resume_link:hover {
+  color: #F5CB5C;
+}
+
+/* Contact section */
+.singup {
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-weight: bold;
+  font-size: x-large;
+  margin-top: 1.5em;
+}
+
+.contact_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 50%;
+  flex-direction: column;
+  gap: 35px;
+  border-radius: 15px;
+  background: #e3e3e3;
+  box-shadow: 16px 16px 32px #F5CB5C,
+        -16px -16px 32px #F5CB5C;
+  border-radius: 8px;
+  margin-top: 200px;
+}
+
+.inputBox,
+.inputBox1 {
+  position: relative;
+  width: 250px;
+}
+
+.inputBox input,
+.inputBox1 input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #000;
+  font-size: 30px;
+  background: transparent;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transition: 0.1s;
+  border-bottom-left-radius: 8px;
+}
+
+.inputBox span,
+.inputBox1 span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 10px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 12px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 3em;
+  margin-top: 50px;
+}
+
+.enter:hover {
+  background-color: rgb(0, 0, 0);
+  color: #F5CB5C;
+}
+
+/* Footer */
+
+.github_footer {
+  color: #F5CB5C;
+  font-weight: 400;
+  font-size: 50px;
+  padding-top: 20px;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 35px;
   cursor: pointer;
 }
 
-.name {
-  font-weight: 600;
+.linkedin {
+  color: #F5CB5C;
+  font-weight: 400;
+  font-size: 50px;
+  padding-top: 20px;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 35px;
+  cursor: pointer;
 }
 
-.name:hover {
+.footer_tag {
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+}
+
+.go_home {
+  font-size: 10px;
+  text-align: center;
+  justify-content: center;
   cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .nav-bar ul li {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .intro {
+    padding: 150px;
+  }
+  
+  #about {
+    padding: 150px;
+  }
+  
+  .portfolio {
+    padding: 50px;
+  }
+  
+  .container {
+    margin: 50px 0;
+  }
+  
+  .card {
+    width: 50%;
+  }
+  
+  .resume {
+    padding: 50px;
+  }
+  
+  .resume_title,
+  .resume_text {
+    margin-left: 50px;
+  }
+  
+  .resume_link {
+    margin-left: 200px;
+  }
+  
+  .contact_card {
+    width: 300px;
+    min-height: 250px;
+  }
+  
+  .inputBox,
+  .inputBox1 {
+    width: 200px;
+  }
 }

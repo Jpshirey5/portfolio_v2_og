@@ -4,6 +4,8 @@ import Main from './Components/main';
 import About from './Components/about';
 import Portfolio from './Components/portfolio';
 import Resume from './Components/resume';
+import Contact from './Components/contact';
+import Footer from './Components/footer';
 
 export default function App() {
   return (
@@ -15,9 +17,15 @@ export default function App() {
           <About />
           <div className='portfolio'>
             <Portfolio />
-             <div className='resume'>
-          <Resume />
-        </div>  
+            <div className='resume'>
+              <Resume />
+            </div>
+            <div className='contact'>
+              <Contact />
+            </div>
+            <div className='footer'>
+              <Footer />
+            </div>
           </div>
         </div>
       </div>
