@@ -8,7 +8,7 @@ export default function Resume() {
             <h1 className='resume_title'>Resume</h1>
             <div className='resume_text'>
                 <h5>Throughout my career, I have created and developed great applications with my training from the University of Central Florida.
-                    Couple my training with my passion for learning, team managment experience and consistent growth as a leader, I can work well with any team that I placed on to accomplish tasks needed to be completed.
+                    Couple my training with my passion for learning, team managment experience and consistent growth as a leader, I can work well with any team that I placed on to accomplish tasks at hand.
                 </h5>
             </div>
         </div>
