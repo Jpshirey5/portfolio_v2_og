@@ -4,7 +4,7 @@ import Image from './images/profile.jpg'
 export default function About() {
     return (
         <div className='about' id='about'>
-            <h1>About </h1>
+            <h1>About</h1>
             <img id='image' src={Image} alt='profile'></img>
             <div className='text'>
                 <p>

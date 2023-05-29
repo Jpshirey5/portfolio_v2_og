@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here (e.g., send data to a server or perform some action)
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    setIsSubmitting(true);
+
+    const formData = { name, email, message };
+
+    try {
+      const response = await axios.post('/api/send-email', formData);
+      console.log(response.data); // Handle the response from the server (e.g., success or error message)
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error:', error);
+      setErrorMessage('Failed to send email');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -19,39 +33,52 @@ export default function Contact() {
         <div className="singup" id="contact">
           Let's Connect
         </div>
-        <div className="inputBox1">
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <span className="user">Name</span>
-        </div>
+        {isSubmitted ? (
+          <div className="success-message">Thank you for your message! We'll be in touch.</div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            {errorMessage && <div className="error-message">{errorMessage}</div>}
+            <div className="inputBox1">
+              <input
+                type="text"
+                id="name"
+                className="user"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <span className="user-label">Name</span>
+            </div>
 
-        <div className="inputBox">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <span>Email</span>
-        </div>
+            <div className="inputBox">
+              <input
+                type="email"
+                id="email"
+                className="user"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <span>Email</span>
+            </div>
 
-        <div className="inputBox">
-          <input
-            type="text"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-          <span>Message</span>
-        </div>
+            <div className="inputBox">
+              <input
+                type="text"
+                id="message"
+                className="user"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+              <span>Message</span>
+            </div>
 
-        <button className="enter" onClick={handleSubmit}>
-          Submit
-        </button>
+            <button className="enter" type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting...' : 'Submit'}
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );
