@@ -92,7 +92,7 @@ html {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-*/.nav-bar img {
+.nav-bar img {
   float: left;
 }
 
@@ -299,7 +299,7 @@ html {
   border-radius: 15px;
   background: #e3e3e3;
   box-shadow: 16px 16px 32px #F5CB5C,
-        -16px -16px 32px #F5CB5C;
+    -16px -16px 32px #F5CB5C;
   border-radius: 8px;
   margin-top: 200px;
 }
@@ -427,50 +427,51 @@ html {
 
 
 @media (max-width: 768px) {
+
   /* Adjust styles for smaller screens */
   .nav-bar ul li {
     margin-right: 20px;
     margin-left: 20px;
   }
-  
+
   .intro {
     padding: 150px;
   }
-  
+
   #about {
     padding: 150px;
   }
-  
+
   .portfolio {
     padding: 50px;
   }
-  
+
   .container {
     margin: 50px 0;
   }
-  
+
   .card {
     width: 50%;
   }
-  
+
   .resume {
     padding: 50px;
   }
-  
+
   .resume_title,
   .resume_text {
     margin-left: 50px;
   }
-  
+
   .resume_link {
     margin-left: 200px;
   }
-  
+
   .contact_card {
     width: 300px;
     min-height: 250px;
   }
-  
+
   .inputBox,
   .inputBox1 {
     width: 200px;
