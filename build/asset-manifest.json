@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio_v2/static/css/main.f5dc2831.css",
+    "main.js": "/portfolio_v2/static/js/main.c59ce1e2.js",
+    "static/js/787.a2cb61a6.chunk.js": "/portfolio_v2/static/js/787.a2cb61a6.chunk.js",
+    "static/media/Local_Finds_SS.png": "/portfolio_v2/static/media/Local_Finds_SS.9a1ae401220dc285974d.png",
+    "static/media/Weather_Dash_SS.png": "/portfolio_v2/static/media/Weather_Dash_SS.90e42d3b70d08ea0b2cd.png",
+    "static/media/Daily_Schedule_SS.png": "/portfolio_v2/static/media/Daily_Schedule_SS.57583ceb6b052b422f96.png",
+    "static/media/Coding_Quiz_SS.png": "/portfolio_v2/static/media/Coding_Quiz_SS.0eaf6d3f5d72ea50d817.png",
+    "static/media/Master_Trader_SS.png": "/portfolio_v2/static/media/Master_Trader_SS.85584dfb4af4e8f613ca.png",
+    "static/media/profile.jpg": "/portfolio_v2/static/media/profile.5198014f9ace078cf852.jpg",
+    "index.html": "/portfolio_v2/index.html",
+    "main.f5dc2831.css.map": "/portfolio_v2/static/css/main.f5dc2831.css.map",
+    "main.c59ce1e2.js.map": "/portfolio_v2/static/js/main.c59ce1e2.js.map",
+    "787.a2cb61a6.chunk.js.map": "/portfolio_v2/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5dc2831.css",
+    "static/js/main.c59ce1e2.js"
+  ]
+}
